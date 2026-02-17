@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div class="wrap" dir="rtl">
+  <header>
+  
+   
+
+    <div class="hudBox">
+      <div class="hud">
+        <div class="chip">مرحله: <b id="lvl">A1</b></div>
+        <div class="chip">زمان: <b id="time">60</b>s</div>
+        <div class="chip">امتیاز: <b id="score">0</b></div>
+        <div class="chip">بهترین رکورد: <b id="best">0</b></div>
+        <div class="chip">جون: <b id="hp">3</b></div>
+        <div class="chip">کلمه درست: <b id="c5">0</b></div>
+      </div>
+    </div>
+  </header>
+<div id="msg" style="margin:8px 0;color:#a9b3d6;font-size:12px"></div>
+
+  <div class="prompt">
+   <div class="targetBar">
+<div class="targetInner">
+  <span class="label">کلمه‌ی هدف :</span>
+  <span class="value" id="targetFa">—</span>
+</div>
+
+
+
+    <div class="row">
+      <div class="kbds">
+        
+      </div>
+    </div>
+  </div>
+
+  <canvas id="c" width="1200" height="560"></canvas>
+<!-- MOBILE CONTROLS -->
+<div id="mctrl" aria-hidden="true">
+  <!-- Left pad -->
+  <div class="mctrl-leftpad">
+    <button class="mbtn mbtn-up"    id="btnJet"   aria-label="Jet">▲</button>
+
+<button class="mbtn mbtn-right" id="btnRight">▶</button>
+<button class="mbtn mbtn-left"  id="btnLeft">◀</button>
+
+    
+    <button class="mbtn mbtn-start" id="btnStart" aria-label="Start">Start</button>
+    <button class="mbtn mbtn-reset" id="btnReset" aria-label="Reset">R</button>
+  </div>
+
+  <!-- Right stack -->
+ <div class="mctrl-rightstack">
+  <button class="mbtn" id="btnE"     aria-label="Open">🔑</button>
+  <button class="mbtn" id="btnJump"  aria-label="Jet">X</button>
+  <button class="mbtn" id="btnShoot" aria-label="Shoot">JET</button>
+</div>
+</div>
+
+  <div class="controls">
+  <div class="btns">
+ 
+    <button class="primary" id="startBtn">Start</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+
+  <!-- سوال بعد از نجات پرنسس -->
+  <div class="choiceOverlay" id="choiceOverlay" aria-hidden="true">
+    <div class="choiceCard">
+      <div class="choiceTitle">Willst du zur nächsten Stufe gehen?</div>
+      <div class="choiceSub">Ja → مرحله بعد | Nein → شروع از اول (A1)</div>
+      <div class="choiceBtns">
+        <button class="primary" id="yesBtn">Ja</button>
+        <button id="noBtn">Nein</button>
+      </div>
+      <div class="choiceHint">کلیدها: Y = Ja ، N = Nein</div>
+    </div>
+  </div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
